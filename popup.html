@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KenGPT Chat</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 16px;
+      background: #fff;
+      width: 360px;
+    }
+    .header {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .chat-window {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 8px;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+    }
+    .message {
+      padding: 8px 12px;
+      border-radius: 16px;
+      margin-bottom: 8px;
+      max-width: 80%;
+      font-size: 13px;
+      line-height: 1.4;
+      white-space: pre-wrap;
+    }
+    .user {
+      background-color: #e0f0ff;
+      align-self: flex-end;
+      text-align: right;
+    }
+    .assistant {
+      background-color: #efefef;
+      align-self: flex-start;
+      text-align: left;
+    }
+    .chat-box {
+      display: flex;
+      margin-top: 12px;
+    }
+    #followup-input {
+      flex: 1;
+      padding: 6px;
+      font-size: 13px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+    #send-followup {
+      padding: 6px 10px;
+      font-size: 13px;
+      border: 1px solid #ccc;
+      border-left: none;
+      background: #007bff;
+      color: white;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    #send-followup:hover {
+      background: #0056b3;
+    }
+    .cta {
+      display: block;
+      text-align: center;
+      margin-top: 12px;
+      font-size: 13px;
+      text-decoration: none;
+      color: #007bff;
+    }
+    .cta:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">KenGPT Chat</div>
+
+  <div id="chat-window" class="chat-window"></div>
+
+  <div class="chat-box">
+    <input type="text" id="followup-input" placeholder="Ask a follow-up..." />
+    <button id="send-followup">Send</button>
+  </div>
+
+  <a href="mailto:Ken@DeLeonRealty.com" class="cta">📬 Want to talk strategy? Email Ken</a>
+  <div class="footer">
+    Disclaimer: For informational purposes only. Not legal or financial advice.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
